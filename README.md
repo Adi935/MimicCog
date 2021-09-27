@@ -4,6 +4,6 @@
 
 ### Contributors to this project
 - [Aditya Mhatre] https://github.com/Adi935
-- [Chirag Shelar] 
+- [Chirag Shelar] https://github.com/Locoya
 - [Sarrah Bastawala] https://github.com/sarrah-basta
 - [Kanak Meshram] https://github.com/kanakmeshram
