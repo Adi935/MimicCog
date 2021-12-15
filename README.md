@@ -41,6 +41,7 @@ ___
 ### Demonstration
 ![demo](https://github.com/Adi935/MimicCog/blob/b4199050655471ff8678b2c9a747290f1f453641/assets/demo2.jpeg)
 ![demo video](https://github.com/Adi935/MimicCog/blob/f9f39d71794a3f5727d2f54d89959b958e44d82d/assets/demo.mp4)
+![demo](https://github.com/Adi935/MimicCog/blob/3f965afc401dcd009d03c4fd22a2676f3edd6a03/assets/presentOutput.jpg)
 ___
 ### Contributors
 ___
