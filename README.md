@@ -2,16 +2,14 @@
 
 This project aims at detecting objects from a video/live feed, and then displaying them as their emojis. 
 ## Table Of Contents
-  
-- [MimicCog](#mimiccog)
-  - [Table Of Contents](#table-of-contents)
-    - [Project-Description](#project-description)
-    - [Technology-Stack](#technology-stack)
-    - [Features-implemented-so-far](#features-implemented-so-far)
-    - [Features-left-to-be-implemented](#features-left-to-be-implemented)
-    - [Demonstration](#demonstration)
-    - [Contributors](#contributors)
-    - [Mentors](#mentors)
+
+- [Project-Description](#project-description)
+- [Technology-Stack](#technology-stack)
+- [Features-implemented-so-far](#features-implemented-so-far)
+- [Features-left-to-be-implemented](#features-left-to-be-implemented)
+- [Demonstration](#demonstration)
+- [Contributors](#contributors)
+- [Mentors](#mentors)
 ### Project-Description
 
 In this project, we have used OpenCV to implement Real-Time Object Detection and then interpreting those objects as "Emojis" as defined by Unicode Consortium, and then displaying the said object.
@@ -41,8 +39,8 @@ ___
 - 3-D Face Emulation.
 ___
 ### Demonstration
-
-g
+![demo](https://github.com/Adi935/MimicCog/blob/b4199050655471ff8678b2c9a747290f1f453641/assets/demo2.jpeg)
+![demovid](https://github.com/Adi935/MimicCog/blob/66e54b23420b360dd0a30ee0740b73cbeeb8f685/assets/demo.mp4)
 ___
 ### Contributors
 ___
