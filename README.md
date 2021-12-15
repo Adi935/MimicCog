@@ -39,8 +39,8 @@ ___
 - 3-D Face Emulation.
 ___
 ### Demonstration
-[!demo](https://github.com/Adi935/MimicCog/blob/b4199050655471ff8678b2c9a747290f1f453641/assets/demo2.jpeg)
-
+![demo](https://github.com/Adi935/MimicCog/blob/b4199050655471ff8678b2c9a747290f1f453641/assets/demo2.jpeg)
+![demovid](https://github.com/Adi935/MimicCog/blob/66e54b23420b360dd0a30ee0740b73cbeeb8f685/assets/demo.mp4)
 ___
 ### Contributors
 ___
