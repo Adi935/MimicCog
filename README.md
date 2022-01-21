@@ -2,6 +2,26 @@
 
 ### Team name: NaN
 
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Team Members] (#team-members)
+- [🗒️About](#️about)
+- [📁 File Structure](#-file-structure)
+- [👨‍💻 Tech-Stack](#-tech-stack)
+- [🛠️ Prerequisites](#️-prerequisites)
+  - [Gesture control](#gesture-control)
+  - [Jupyter Notebook](#jupyter-notebook)
+  - [Game](#game)
+- [🎲 Starting the game](#-starting-the-game)
+- [👋 Game Controls](#-game-controls)
+- [📈 Future Prospects](#-future-prospects)
+- [🎮 Demo](#-demo)
+  - [Demo of the game using keyboard<](#demo-of-the-game-using-keyboard)
+  - [Demo of the game using hand detection](#demo-of-the-game-using-hand-detection)
+- [🏅 Team Members](#-team-members)
+- [😎 Mentors](#-mentors)
+- [License](#license)
+
 ## Team members
 * Aditya Mhatre - [GitHub Profile](https://github.com/Adi935), [Mail](adi13mhatre@gmail.com)
 * Chirag Shelar - [GitHub Profile](https://github.com/ChiragShelar), [Mail](chiragshelar1428@gmail.com)
