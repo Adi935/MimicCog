@@ -1,10 +1,13 @@
 # MimiCog
 
+<p align="center"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftowardsdatascience.com%2Ffacial-recognition-happiness-bbb3c4293d1d&psig=AOvVaw1MlKEAnf79vLxLthFpJHgR&ust=1642862719493000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNCly9iKw_UCFQAAAAAdAAAAABAD" /></p>
+
 ### Team name: NaN
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Team Members] (#team-members)
+- [Mentors]
 - [🗒️About](#️about)
 - [📁 File Structure](#-file-structure)
 - [👨‍💻 Tech-Stack](#-tech-stack)
