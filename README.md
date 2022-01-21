@@ -1,8 +1,9 @@
-# MimiCog
+<h1 align="center">MimicCog</h1>
+<p style="font-size: xx-small" align="center">By Team NaN</p>
 
 ![0_lKD8sDQ9fAXt70VC](https://user-images.githubusercontent.com/84874044/150546897-15033664-c9e2-4631-8dfd-a5f3cd128751.gif)
 
-### Team name: NaN
+
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
@@ -12,7 +13,7 @@
 - [📁 File Structure](#file-structure)
 - [👨‍💻 Tech-Stack](#technology-stack)
 - [✅ Progress](#progress)
-- [🛠️ Project Setup and Prerequisites](#️project-setup-and-prerequisites)
+- [🛠️ Project Setup and Prerequisites](#️Project-Setup-and-Prerequisites)
 - [🎲 Usage](#usage)
 - [📍 Applications](#applications)
 - [📈 Future Prospects](#-future-prospects)
