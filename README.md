@@ -25,7 +25,6 @@
 * Sarrah Bastawala - [GitHub Profile](https://github.com/sarrah-basta), [Mail](sarrah.basta@gmail.com)
 * Kanak Meshram - [GitHub Profile](https://github.com/kanakmeshram), [Mail](canaq.1301@gmail.com)
 
-[Mentors](#mentors)
 ## Mentors
 * Ravi Maurya
 * Shreyas Penkar
