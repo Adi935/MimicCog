@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Display Webcam Stream</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="..\static\switchers.js"></script>
+ 
+<style>
+#container {
+    margin: 0px auto;
+    padding : 0px ;
+    margin-left: auto ;
+    width: 300px;
+    height: 230px;
+    border: 10px #333 solid;
+}
+#videoElement {
+    width: 300px;
+    height: 230px;
+    background-color: #666;
+}
+#Output{
+  font-size: 7rem;
+}
+#canvas{
+  visibility: hidden;
+}
+</style>
+</head>
+ 
+<body>
+  <div id="container">
+      <video autoplay="true" id="videoElement">
+      
+      </video>
+      <canvas id="canvas" width="320" height="240"></canvas>
+    </div>
+    <div>
+        <label for="input">Or Choose a video file to process (Not working yet ;-;):</label>
+            <input type="file"
+           id="input" name="input_video"
+           accept="video/mp4, video/mov, image/jpg">
+        <centre>
+    </div>
+    <span id='Output'>
+      No Output
+    </span>
+    </p>
+    <centre>
+    <script>
+        document.write("Output Gets printed Here");   
+    </script>
+    </centre>
+  <script type = 'text/javascript'>
+      const switcher = {
+        0: 0x1f937,
+        81:0x1f620,					//angry1
+        82:0x1f620,					
+        83:0x1f620,
+        84:0x1f620,
+        85:0x1f620,
+        86:0x1f615,					//sad1
+        87:0x1f615,
+        88:0x1f615,
+        89:0x1f615,
+        90:0x1f615,
+        91:0x1f642,					//happy1
+        92:0x1f642,
+        93:0x1f642,
+        94:0x1f642,
+        95:0x1f642,
+        96:0x1f62E,					//surprised1
+        97:0x1f62E,
+        98:0x1f62E,
+        99:0x1f62E,
+        100:0x1f62E,
+        101:0x1f636,			//neutral
+        102:0x1f636,
+        103:0x1f636,
+        104:0x1f636,
+        105:0x1f636,
+      }
+      $(document).ready(function() {
+ 
+      var socket = io.connect('');
+      socket.on('connect', function(){
+        // socket.send('User has connected!'); 
+        console.log("Connected");                                                                      
+      });
+
+      socket.on('getOutput', function(choice){
+        console.log("Detected: ", choice)
+         $('#Output').text(String.fromCodePoint(switcher[choice]))
+      });
+
+      var video = document.querySelector("#videoElement");
+      let canvas = document.querySelector("#canvas");
+      if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ video: true })
+          .then(function (stream) {
+              video.srcObject = stream;
+              every(1000);    // call it after every 1000 milliseconds
+          })
+          .catch(function (err0r) {
+              console.log("Something went wrong!" + err0r);
+          });
+      }
+ 
+      function every (x) {
+          let last = new Date().getTime();
+ 
+          (function loop () {
+              const now = new Date().getTime(),
+              delta = now - last;
+ 
+ 
+              if (delta >= x) {
+                  canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+                  let image_data_url = canvas.toDataURL('image/jpeg');
+                  // here image_data_url is your BASE64 image
+                  // send this using socket heresocket.send('Sending a frame!')
+                //   socket.send($('mydata').val());
+                //   $('mydata').val('');
+                 console.log("Trying to send frames")
+                 image_data_url = image_data_url.replace('data:image/jpeg;base64,', ''); 
+                 socket.emit("getFrames", image_data_url);
+
+                  last = now;
+              }
+ 
+              window.requestAnimationFrame(loop);
+          })();
+      }
+      });
+      
+</script>
+<!-- <script>
+var video = document.querySelector("#videoElement");
+ 
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+} -->
+</script>
+</body>
+</html>
