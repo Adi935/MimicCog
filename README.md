@@ -6,9 +6,9 @@
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
-- [Team Members] (#team-members)
-- [Mentors]
-- [🗒️About](#️about)
+- [Team Members](#team-members)
+  - [Mentors](#mentors)
+- [🗒️Description](#️about)
 - [📁 File Structure](#-file-structure)
 - [👨‍💻 Tech-Stack](#-tech-stack)
 - [🛠️ Prerequisites](#️-prerequisites)
@@ -25,12 +25,13 @@
 - [😎 Mentors](#-mentors)
 - [License](#license)
 
-## Team members
+## Team Members
 * Aditya Mhatre - [GitHub Profile](https://github.com/Adi935), [Mail](adi13mhatre@gmail.com)
 * Chirag Shelar - [GitHub Profile](https://github.com/ChiragShelar), [Mail](chiragshelar1428@gmail.com)
 * Sarrah Bastawala - [GitHub Profile](https://github.com/sarrah-basta), [Mail](sarrah.basta@gmail.com)
 * Kanak Meshram - [GitHub Profile](https://github.com/kanakmeshram), [Mail](canaq.1301@gmail.com)
 
+[Mentors](#mentors)
 ## Mentors
 * Ravi Maurya
 * Shreyas Penkar
