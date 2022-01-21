@@ -1,6 +1,6 @@
 # MimiCog
 
-<p align="center"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftowardsdatascience.com%2Ffacial-recognition-happiness-bbb3c4293d1d&psig=AOvVaw1MlKEAnf79vLxLthFpJHgR&ust=1642862719493000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNCly9iKw_UCFQAAAAAdAAAAABAD" /></p>
+<p align="center">![0_lKD8sDQ9fAXt70VC](https://user-images.githubusercontent.com/84874044/150546897-15033664-c9e2-4631-8dfd-a5f3cd128751.gif)</p>
 
 ### Team name: NaN
 
