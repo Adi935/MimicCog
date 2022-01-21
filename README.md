@@ -1,6 +1,6 @@
 # MimiCog
 
-<p align="center">![0_lKD8sDQ9fAXt70VC](https://user-images.githubusercontent.com/84874044/150546897-15033664-c9e2-4631-8dfd-a5f3cd128751.gif)</p>
+![0_lKD8sDQ9fAXt70VC](https://user-images.githubusercontent.com/84874044/150546897-15033664-c9e2-4631-8dfd-a5f3cd128751.gif)
 
 ### Team name: NaN
 
