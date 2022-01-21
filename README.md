@@ -6,24 +6,17 @@
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
-- [Team Members](#team-members)
-  - [Mentors](#mentors)
+- [🏅Team Members](#team-members)
+- [😎Mentors](#mentors)
 - [🗒️Description](#️about)
-- [📁 File Structure](#-file-structure)
-- [👨‍💻 Tech-Stack](#-tech-stack)
-- [🛠️ Prerequisites](#️-prerequisites)
-  - [Gesture control](#gesture-control)
-  - [Jupyter Notebook](#jupyter-notebook)
-  - [Game](#game)
-- [🎲 Starting the game](#-starting-the-game)
-- [👋 Game Controls](#-game-controls)
+- [📁 File Structure](#file-structure)
+- [👨‍💻 Tech-Stack](#technology-stack)
+- [✅ Progress](#progress)
+- [🛠️ Project Setup and Prerequisites](#️project-setup-and-prerequisites)
+- [🎲 Usage](#usage)
+- [📍 Applications](#applications)
 - [📈 Future Prospects](#-future-prospects)
-- [🎮 Demo](#-demo)
-  - [Demo of the game using keyboard<](#demo-of-the-game-using-keyboard)
-  - [Demo of the game using hand detection](#demo-of-the-game-using-hand-detection)
-- [🏅 Team Members](#-team-members)
-- [😎 Mentors](#-mentors)
-- [License](#license)
+- [🎮 Demo](#-demo-of-the-project)
 
 ## Team Members
 * Aditya Mhatre - [GitHub Profile](https://github.com/Adi935), [Mail](adi13mhatre@gmail.com)
@@ -90,7 +83,7 @@ MimiCog
 - [ ] Take in pre-recorded video as a stream instead of live webcam.
 - [ ] Refining the website.
 
-## Project Setup
+## Project Setup and Prerequisites
 Clone this GitHub Repository or Download it. For cloning you must have GIT installed.
 
 Type this command in the Git Bash Terminal:
@@ -131,11 +124,11 @@ Go to your preferred browser and enter the URL displayed on your console to run 
 * Simulate your surroundings and yourself in a 2D enviornment on your screen.
 * Can be used in games, apps, etc. that uses emotions/expressions shown by the user.
 
-## Future scope
+## Future Scope
 - [ ] Make the Frontend compatiable as an extension for multiple existing browsers, websites and applications.
 - [ ] Instead of just one object, the entire scene captured is simulated as a 2D enviornment.
 
-## Screenshots
+## Demo of the Project
 
 * Detection of objects/emotions is shown in the console log.
 
