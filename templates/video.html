@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Display Webcam Stream</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+ 
+<style>
+ #container {
+            margin: 0px auto;
+            width: 400px;
+            height: 300px;
+            border: 10px #333 solid;
+        }
+        #videoElement {
+            width: 400px;
+            height: 300px;
+            background-color: #666;
+        }
+        #grad{
+            /* background-image: linear-gradient(rgb(155, 110, 197),black); */
+            background-image: linear-gradient(#b721ff,black);
+        }
+        #text{
+            /* background-color: blueviolet; */
+            color:white
+        }
+        video, input {
+            display: block;
+        }
+
+        input {
+            width: 100%;       
+        }
+
+        .info {
+            background-color: aqua;            
+        }
+
+        .error {
+            background-color: red;
+            color: white;
+        }
+        #Output{
+        font-size: 9rem;
+        color: white;
+        }
+        /* #canvas{
+        visibility: hidden;
+        } */
+</style>
+</head>
+ 
+<body>
+    <div id='grad'>
+    <div id="container">
+        <div id="message"></div>
+        <video autoplay="true" id="videoElement"></video>
+        <canvas id="canvas" width="400" height="300"></canvas>
+    </div>
+    <div>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <label for="input"  id="text"> Allow MimicCog to access your camera :</label>
+        <button type="button" id="sq1" NAME="Live Camera Feed" class="btn-group-sm"  onClick="onClickHandler()">Live Camera Feed</button>
+        <br><br>
+        <label for="input"  id="text">Or Choose a video file to process :</label>
+        <input type="file" accept="video/*"/>
+        <br>
+        <br>
+    </div>
+    <span id='Output'>
+      Waiting for Detection
+    </span>
+    <br><br>
+    </p>
+    <centre>
+    <!-- <script>
+        document.write("Output Gets printed Here");   
+    </script> --> 
+    <script type="text/javascript">
+        var square1 = document.getElementById("sq1");
+        square1.value = localStorage.getItem("sq1");
+    
+    </script>
+    </centre>
+    <script type = "text/javascript">
+    var video = document.querySelector("#videoElement");
+    let canvas = document.querySelector("#canvas");
+      const switcher = {
+        1: 0x128512,
+        2: 0x1f604, 
+      }
+      $(document).ready(function() {
+ 
+      var socket = io.connect('');
+      socket.on('connect', function(){
+        // socket.send('User has connected!'); 
+        console.log("Connected");
+        // document.getElementById("sq1").addEventListener("click", function () {
+        //     console.log('clicked');
+        //     // if (navigator.mediaDevices.getUserMedia) {
+        //     // navigator.mediaDevices.getUserMedia({ video: true })
+        //     // .then(function (stream) {
+        //     //     video.srcObject = stream;
+        //     //     console.log("camera is open")
+        //     //     every(1000);    // call it after every 1000 milliseconds
+        //     // })
+        //     // .catch(function (err0r) {
+        //     //     console.log("Something went wrong!" + err0r);
+        //     // });
+        // // }
+        // });
+        });
+
+        socket.on('getOutput', function(choice){
+            console.log("Detected: ", choice)
+            choice = 2
+            $('#Output').text(String.fromCodePoint(switcher[choice]))
+        });
+
+        // socket.on('clicked', function() {
+        // //if condition
+        //     console.log('clicked');
+        //     onClickHandler();
+        // });
+
+        // function onClickHandler() {
+        //     if (navigator.mediaDevices.getUserMedia) {
+        //     navigator.mediaDevices.getUserMedia({ video: true })
+        //     .then(function (stream) {
+        //         video.srcObject = stream;
+        //         console.log("camera is open")
+        //         every(1000);    // call it after every 1000 milliseconds
+        //     })
+        //     .catch(function (err0r) {
+        //         console.log("Something went wrong!" + err0r);
+        //     });
+        // }
+        // }
+        (function localFileVideoPlayer() {
+            'use strict'
+        var URL = window.URL || window.webkitURL
+        var displayMessage = function (message, isError) {
+            var element = document.querySelector('#message')
+            element.innerHTML = message
+            element.className = isError ? 'error' : 'info'
+        }
+        var playSelectedFile = function (event) {
+            var file = this.files[0]
+            var type = file.type
+            var videoNode = document.getElementById('videoElement')
+            var canPlay = videoNode.canPlayType(type)
+            if (canPlay === '') canPlay = 'no'
+            var message = 'Can play type "' + type + '": ' + canPlay
+            var isError = canPlay === 'no'
+            displayMessage(message, isError)
+
+            if (isError) {
+            return
+            }
+
+            var fileURL = URL.createObjectURL(file)
+            videoNode.src = fileURL
+            every(10);    // call it after every 1000 milliseconds
+        }
+        var inputNode = document.querySelector('input')
+        inputNode.addEventListener('change', playSelectedFile, false)
+        })()
+ 
+      function every (x) {
+          let last = new Date().getTime();
+ 
+          (function loop () {
+              const now = new Date().getTime(),
+              delta = now - last;
+ 
+ 
+              if (delta >= x) {
+                  canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+                  let image_data_url = canvas.toDataURL('image/jpeg');
+                  // here image_data_url is your BASE64 image
+                  // send this using socket heresocket.send('Sending a frame!')
+                //   socket.send($('mydata').val());
+                //   $('mydata').val('');
+                 console.log("Trying to send frames")
+                 image_data_url = image_data_url.replace('data:image/jpeg;base64,', ''); 
+                 socket.emit("getFrames", image_data_url);
+
+                 last = now;
+              }
+ 
+              window.requestAnimationFrame(loop);
+          })();
+      }
+    });
+</script>     
+</div>
+</body>
+</html>
